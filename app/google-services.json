@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "414816046383",
+    "firebase_url": "https://quickjobs-ba715.firebaseio.com",
+    "project_id": "quickjobs-ba715",
+    "storage_bucket": "quickjobs-ba715.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:414816046383:android:5b3d7bf9a69fa3c3",
+        "android_client_info": {
+          "package_name": "ml.siddharthm.quickjobs_getthingsdone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "414816046383-3nchri1im07i81g6akktp86pq963hbnu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ml.siddharthm.quickjobs_getthingsdone",
+            "certificate_hash": "dd2150147763d1bac9b257511fb14b0eca138646"
+          }
+        },
+        {
+          "client_id": "414816046383-k98vcmhdvlqkup7q6akhq1vdj3feno7m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCd0rbCL2BwZ9JnXt-5H6yuI2BpUW1QT-8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "414816046383-k98vcmhdvlqkup7q6akhq1vdj3feno7m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
