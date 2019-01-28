@@ -9,19 +9,39 @@ import android.os.Handler;
 public class SplashScreenActivity extends AppCompatActivity {
 
     private static int Splash_Screen_Time = 3000;
+    private Boolean isFirstRun;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent loginIntent = new Intent(SplashScreenActivity.this,LoginActivity.class);
-                startActivity(loginIntent);
-                finish();
-            }
-        },Splash_Screen_Time);
+        isFirstRun = getSharedPreferences("PREFERENCE",MODE_PRIVATE).getBoolean("isfirstrun",true);
+
+        if (isFirstRun){
+            getSharedPreferences("PREFERENCE",MODE_PRIVATE).edit().putBoolean("isfirstrun",false).commit();
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent welcomeIntent = new Intent(SplashScreenActivity.this, WelcomeActivity.class);
+                    startActivity(welcomeIntent);
+                    finish();
+                }
+            },Splash_Screen_Time);
+        } else {
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent loginIntent = new Intent(SplashScreenActivity.this, LoginActivity.class);
+                    startActivity(loginIntent);
+                    finish();
+                }
+            },Splash_Screen_Time);
+
+
+        }
+
     }
 }
