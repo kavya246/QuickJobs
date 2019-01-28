@@ -26,7 +26,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:11.8.0'
     implementation 'com.google.firebase:firebase-database:11.8.0'
     implementation 'com.google.firebase:firebase-storage:11.8.0'
-    implementation 'com.github.msayan:tutorial-view:v1.0.8'
+    implementation 'com.github.apl-devs:appintro:v4.2.3'
 
 
     testImplementation 'junit:junit:4.12'
