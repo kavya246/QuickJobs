@@ -119,7 +119,7 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
                 if (buttonNext.getText().toString().equalsIgnoreCase("next")){
                     mSlideViewPager.setCurrentItem(mCurrentPage + 1);
                 } else {
-                    startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
+                    startActivity(new Intent(WelcomeActivity.this, HomeActivity.class));
                 }
                 break;
             case R.id.btn_previous:
