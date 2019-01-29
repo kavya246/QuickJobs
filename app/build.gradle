@@ -28,10 +28,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:11.8.0'
     implementation 'com.google.firebase:firebase-storage:11.8.0'
     implementation 'de.hdodenhof:circleimageview:3.0.0'
-    compile 'com.google.android.gms:play-services:11.8.0'
-    compile 'com.google.android.gms:play-services-maps:11.8.0'
-    compile 'com.google.firebase:firebase-core:11.8.0'
-    compile 'com.google.firebase:firebase-messaging:11.8.0'
+    implementation 'com.google.android.gms:play-services:11.8.0'
+    implementation 'com.google.android.gms:play-services-maps:11.8.0'
+    implementation 'com.google.firebase:firebase-core:11.8.0'
+    implementation 'com.google.firebase:firebase-messaging:11.8.0'
 
     implementation 'com.karumi:dexter:5.0.0'
 

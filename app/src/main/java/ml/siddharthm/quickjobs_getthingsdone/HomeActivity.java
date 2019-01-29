@@ -2,6 +2,7 @@ package ml.siddharthm.quickjobs_getthingsdone;
 
 import android.Manifest;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -150,6 +151,9 @@ public class HomeActivity extends AppCompatActivity
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
+
+            Intent myprofileIntent = new Intent(HomeActivity.this,MyProfileDetailsActivity.class);
+            startActivity(myprofileIntent);
 
         }
 
