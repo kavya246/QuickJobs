@@ -6,6 +6,7 @@ import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import android.view.LayoutInflater;
 import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
@@ -35,15 +36,19 @@ public class HomeActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                LayoutInflater inflater = getLayoutInflater();
+                View alertLayout = inflater.inflate(R.layout.job_dialog_post, null);
                 AlertDialog.Builder builder1 = new AlertDialog.Builder(HomeActivity.this);
                 builder1.setMessage("Post your Job");
+                builder1.setView(alertLayout);
                 builder1.setCancelable(true);
 
                 builder1.setPositiveButton(
                         "Submit",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-                                Toast.makeText(HomeActivity.this,"Searching for freelancers",Toast.LENGTH_LONG);
+
+                                Toast.makeText(getApplicationContext(),"Searching for freelancers",Toast.LENGTH_LONG).show();
                                 dialog.cancel();
                             }
                         });

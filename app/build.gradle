@@ -27,6 +27,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:11.8.0'
     implementation 'com.google.firebase:firebase-storage:11.8.0'
     implementation 'de.hdodenhof:circleimageview:3.0.0'
+    compile 'cn.pedant.sweetalert:library:1.3'
+
 
 
 
