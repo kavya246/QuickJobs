@@ -63,6 +63,7 @@
         android:layout_height="50dp"
         android:layout_below="@+id/profile_register_address"
         android:layout_marginLeft="150dp"
+        android:id="@+id/profile_register_button"
         android:textAllCaps="false"
         android:text="Get things done"/>
 
