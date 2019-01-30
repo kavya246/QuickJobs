@@ -104,10 +104,9 @@ public class ProfileRegisterActivity extends AppCompatActivity {
             Toast.makeText(this,"Feild Cannot be empty",Toast.LENGTH_SHORT);
         }
         else{
-            loadingBar.setTitle("Creating New Account");
-            loadingBar.setMessage("Just a minute..Your Account gonna be up soon..");
-            loadingBar.setCanceledOnTouchOutside(true);
-            loadingBar.show();
+            Intent registerIntent = new Intent(ProfileRegisterActivity.this,HomeActivity.class);
+            startActivity(registerIntent);
+
 
            /* String currentUserId = mAuth.getCurrentUser().getUid();
 
@@ -124,7 +123,7 @@ public class ProfileRegisterActivity extends AppCompatActivity {
                         Intent registerIntent = new Intent(ProfileRegisterActivity.this,HomeActivity.class);
                         startActivity(registerIntent);
                         Toast.makeText(ProfileRegisterActivity.this,"Account Created Succesfully",Toast.LENGTH_SHORT);
-                        loadingBar.dismiss();
+
                     }else {
                         String error = task.getException().toString();
                         Toast.makeText(ProfileRegisterActivity.this,error,Toast.LENGTH_SHORT);
