@@ -143,6 +143,7 @@ public class ProfileRegisterActivity extends AppCompatActivity {
           /*  profileMap.put("phone",profilePhone.getText().toString()); */
             profileMap.put("email",profileEmail.getText().toString());
             profileMap.put("address",profileAddress.getText().toString());
+
             RootRef.child("Users").child(currentUserId).setValue(profileMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
@@ -184,7 +185,7 @@ public class ProfileRegisterActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(ProfileRegisterActivity.this, "Image uploaded succesfully...", Toast.LENGTH_SHORT).show();
-                            final String downloadUrl = task.getResult().getDownloadUrl().toString();
+                            String downloadUrl = task.getResult().getDownloadUrl().toString();
                             RootRef.child("Users").child(currentUserId).child("image").setValue(downloadUrl).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {

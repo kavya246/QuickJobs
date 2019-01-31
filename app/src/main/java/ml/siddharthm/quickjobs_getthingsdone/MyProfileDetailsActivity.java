@@ -129,13 +129,13 @@ public class MyProfileDetailsActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(MyProfileDetailsActivity.this, "Image uploaded succesfully...", Toast.LENGTH_SHORT);
-                            final String downloadUrl = task.getResult().getDownloadUrl().toString();
+                            String downloadUrl = task.getResult().getDownloadUrl().toString();
                             RootRef.child("Users").child(currentUserId).child("image").setValue(downloadUrl).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
                                         Toast.makeText(MyProfileDetailsActivity.this, "Image saved in db succesfully", Toast.LENGTH_SHORT);
-                                        ((CircleImageView) findViewById(R.id.profile_register_picture)).setImageURI(resultUri);
+                                        ((CircleImageView) findViewById(R.id.my_profile_picture)).setImageURI(resultUri);
                                         loadingbar.dismiss();
                                     } else {
                                         Toast.makeText(MyProfileDetailsActivity.this, task.getException().toString(), Toast.LENGTH_SHORT);
