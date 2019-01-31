@@ -50,7 +50,7 @@
         android:text="+91 9394803679"
         android:id="@+id/my_profile_phone"
         />
-    <TextView
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/my_profile_phone"
@@ -63,10 +63,18 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/my_profile_email"
         android:textAlignment="center"
+        android:id="@+id/my_profile_address"
         android:layout_margin="10dp"
         android:text="Room no:404, loren ipsum complex, kochi, kerala"
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="update"
+        android:id="@+id/my_profile_button"
+        android:layout_below="@+id/my_profile_address"
+        android:layout_marginLeft="160dp"/>
 
 
 </RelativeLayout>
