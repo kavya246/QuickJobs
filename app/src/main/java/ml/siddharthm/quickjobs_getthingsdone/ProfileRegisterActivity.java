@@ -32,8 +32,8 @@ public class ProfileRegisterActivity extends AppCompatActivity {
     private TextView profilePhone;
     private EditText profileName,profileEmail,profileAddress;
     private Button createAccountButton;
-   /*  private FirebaseAuth mAuth;
-    private DatabaseReference RootRef; */
+   private FirebaseAuth mAuth;
+    private DatabaseReference RootRef;
 
 
     @Override
@@ -41,8 +41,8 @@ public class ProfileRegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_register);
 
-      /*  mAuth = FirebaseAuth.getInstance();
-        RootRef = FirebaseDatabase.getInstance().getReference(); */
+        mAuth = FirebaseAuth.getInstance();
+        RootRef = FirebaseDatabase.getInstance().getReference();
 
         createAccountButton = (Button)findViewById(R.id.profile_register_button);
         myToolbar = findViewById(R.id.my_profile_toolbar);
@@ -104,16 +104,15 @@ public class ProfileRegisterActivity extends AppCompatActivity {
             Toast.makeText(this,"Feild Cannot be empty",Toast.LENGTH_SHORT);
         }
         else{
-            Intent registerIntent = new Intent(ProfileRegisterActivity.this,HomeActivity.class);
-            startActivity(registerIntent);
 
 
-           /* String currentUserId = mAuth.getCurrentUser().getUid();
+
+           String currentUserId = mAuth.getCurrentUser().getUid();
 
             HashMap<String,String> profileMap = new HashMap<>();
             profileMap.put("uid",currentUserId);
             profileMap.put("name",profileName.getText().toString());
-            profileMap.put("phone",profilePhone.getText().toString());
+          /*  profileMap.put("phone",profilePhone.getText().toString()); */
             profileMap.put("email",profileEmail.getText().toString());
             profileMap.put("address",profileAddress.getText().toString());
             RootRef.child("Users").child(currentUserId).setValue(profileMap).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -129,7 +128,7 @@ public class ProfileRegisterActivity extends AppCompatActivity {
                         Toast.makeText(ProfileRegisterActivity.this,error,Toast.LENGTH_SHORT);
                     }
                 }
-            }); */
+            });
 
         }
     }
