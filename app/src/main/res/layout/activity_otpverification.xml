@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".OTPVerificationActivity">
 
     <EditText
@@ -16,7 +17,7 @@
         android:layout_marginEnd="17dp"
         android:layout_marginTop="180dp"
         android:padding="8dp"
-        android:hint="Wirte Phone Number here"
+        android:hint="Enter your mobile number here"
         android:textAllCaps="false"
         android:textSize="15sp"
 
@@ -44,6 +45,7 @@
         android:id="@+id/send_verification_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#FF6663"
         android:text="Send Verification Code"
         android:layout_below="@+id/verification_code_input"
         android:layout_marginStart="17dp"
